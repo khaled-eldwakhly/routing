@@ -1,0 +1,162 @@
+:root {
+  --main-color: #2c3e50;
+  --second-color: #1abc9c;
+  --font-family: "Rubik", sans-serif;
+}
+
+body {
+  font-family: var(--font-family) !important;
+}
+
+nav {
+  background-color: var(--main-color);
+  min-height: 100px;
+}
+
+.active {
+  background-color: var(--second-color);
+}
+
+.main-link.active {
+  background-color: var(--main-color);
+}
+
+section {
+  background-color: var(--second-color);
+  min-height: 100vh;
+  padding-top: 100px;
+}
+
+.home .avatar {
+  width: 33%;
+}
+
+.home h2,
+.about h2 {
+  position: relative;
+}
+
+.home h2::before,
+.about h2::before {
+  content: "";
+  width: 25%;
+  height: 4px;
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  background-color: white;
+  transform: translateX(150%);
+}
+
+.portfolio h2,
+.contact h2 {
+  color: var(--main-color);
+  position: relative;
+}
+
+.portfolio h2::before,
+.contact h2::before {
+  content: "";
+  width: 15%;
+  height: 4px;
+  position: absolute;
+  bottom: -15px;
+  left: 0;
+  background-color: var(--main-color);
+  transform: translateX(280%);
+}
+
+.portfolio-card:hover .layer {
+  cursor: pointer;
+  opacity: 1;
+}
+
+.portfolio-card .layer {
+  background-color: #1abc9ce7;
+  opacity: 0;
+  transition: opacity 550ms ease;
+}
+
+.portfolio-card .layer i {
+  font-size: 75px;
+}
+
+.contact form {
+  width: 55%;
+}
+
+.contact form label {
+  color: var(--second-color);
+  transform: translateY(65%);
+  opacity: 0;
+  transition: transform 550ms ease, opacity 550ms ease;
+}
+
+.contact form label.visible {
+  transform: translateY(0%);
+  opacity: 1;
+}
+
+.contact form input {
+  border: none;
+  border-bottom: 1px solid rgba(191, 188, 188, 0.758);
+}
+
+.contact form input:focus {
+  outline: none;
+}
+
+.contact form button {
+  background-color: var(--second-color) !important;
+}
+
+.footer {
+  background-color: var(--main-color);
+}
+
+.footer ul li i {
+  font-size: 20px !important;
+}
+.footer ul li {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 25px;
+  height: 25px;
+  z-index: 1;
+}
+
+.footer ul li::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 40px;
+  height: 40px;
+  transform: translate(-50%, -50%);
+  border: white 1px solid;
+  border-radius: 50%;
+  z-index: 0;
+}
+
+.footer .copyright {
+  background-color: #1a252f;
+}
+
+.my-modal {
+  height: 100vh;
+  width: 100vw;
+  z-index: 20;
+  background-color: #0d6dfd42;
+}
+
+.my-modal div {
+  width: 40%;
+}
+
+@media screen and (max-width: 800px) {
+  .my-modal div {
+    width: 80%;
+  }
+}
