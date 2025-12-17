@@ -46,7 +46,7 @@ export default function Contact() {
             <div className="w-100">
               <label
                 htmlFor="userAge"
-                className={`${ageLabel === false ? "invisible" : "visible"}`}
+                className={`${ageLabel === false ? "" : "visible"}`}
               >
                 userAge:
               </label>
@@ -69,7 +69,7 @@ export default function Contact() {
             <div className="w-100">
               <label
                 htmlFor="userEmail"
-                className={`${emailLabel === false ? "invisible" : "visible"}`}
+                className={`${emailLabel === false ? "" : "visible"}`}
               >
                 userEmail:
               </label>
@@ -92,9 +92,7 @@ export default function Contact() {
             <div className="w-100">
               <label
                 htmlFor="userPassword"
-                className={`${
-                  passwordLabel === false ? "invisible" : "visible"
-                }`}
+                className={`${passwordLabel === false ? "" : "visible"}`}
               >
                 userPassword:
               </label>
